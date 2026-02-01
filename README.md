@@ -70,7 +70,7 @@ A camada Gold foi projetada para permitir consumo direto por ferramentas de Busi
 
 ## Estrutura do Repositório
 
-`
+```Text
 ibge-sidra-medallion-pipeline/
   notebooks/
     00_setup_paths.ipynb
@@ -78,12 +78,23 @@ ibge-sidra-medallion-pipeline/
     02_silver_tratamento_sidra_6579.ipynb
     03_gold_consumo_sidra_6579.ipynb
   images/
-    workspace.png
+    README.md
     bronze.png
-    silver.png
     gold.png
+    silver.png
+    workspace.png
   README.md
-`
+```
+
+
+## Instruções de Execução
+
+1. Executar o notebook <strong>00_setup_paths.ipynb</strong> para criação do catálogo e schema analítico.
+2. Executar o notebook <strong>01_bronze_ingestao_sidra_6579.ipynb</strong> para ingestão dos dados brutos.
+3. Executar o notebook <strong>02_silver_tratamento_sidra_6579.ipynb</strong> para tratamento e padronização.
+4. Executar o notebook <strong>03_gold_consumo_sidra_6579.ipynb</strong> para geração da camada analítica final.
+
+
 
 ## Evidências da Arquitetura Medalhão
 
@@ -95,19 +106,16 @@ Workspace Databricks organizado por notebooks, refletindo claramente as etapas d
 ![Workspace Databricks](images/workspace.png)
 
 
-
 ### Bronze – Ingestão Bruta
 Dados ingeridos diretamente da API pública do IBGE SIDRA, preservando o formato original e incluindo metadados técnicos.
 
 ![Tabela Bronze](images/bronze.png)
 
 
-
 ### Silver – Tratamento e Qualidade
 Dados tratados, tipados e padronizados, removendo inconsistências e preparando a base para consumo analítico.
 
 ![Tabela Silver](images/silver.png)
-
 
 
 ### Gold – Consumo Analítico
