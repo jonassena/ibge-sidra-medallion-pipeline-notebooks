@@ -1,5 +1,9 @@
 # IBGE SIDRA – Medallion Pipeline (Databricks)
 
+
+## Descrição da Solução
+
+
 Pipeline de dados analítico desenvolvido a partir da API pública do <strong>IBGE SIDRA (Tabela 6579 – População residente estimada)</strong>, utilizando <strong>Databricks Free Edition</strong> e seguindo a <strong>arquitetura Medalhão (Bronze, Silver e Gold)</strong>.
 
 O objetivo do projeto é demonstrar boas práticas de engenharia de dados para ingestão, tratamento e disponibilização de dados com foco em consumo analítico, clareza de grão, reprocessamento controlado e organização para ferramentas de BI.
