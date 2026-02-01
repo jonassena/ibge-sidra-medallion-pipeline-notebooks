@@ -63,12 +63,13 @@ A camada Gold foi projetada para permitir consumo direto por ferramentas de Busi
 
 ## Decisões de Arquitetura
 
-- <strong>Arquitetura Medalhão:</strong> adotada para separar responsabilidades, facilitar manutenção, auditoria e evolução do pipeline.
-- <strong>Reprocessamento explícito:</strong> todas as camadas utilizam estratégia reprocessável (DROP + overwrite), adequada ao caráter histórico da fonte pública.
-- <strong>Bronze sem regras de negócio:</strong> preserva fidelidade à fonte e garante rastreabilidade.
-- <strong>Silver com foco em qualidade:</strong> concentra tipagem, padronização e consistência dos dados.
-- <strong>Gold orientada a consumo:</strong> entrega dados agregados e prontos para análise, reduzindo complexidade para usuários finais.
-- <strong>Delta Lake:</strong> utilizado para garantir consistência, confiabilidade e organização das tabelas analíticas.
+- <strong>Arquitetura Medalhão:</strong> adotada para separar responsabilidades entre ingestão, tratamento e consumo analítico, facilitando manutenção, auditoria e evolução do pipeline.
+- <strong>Reprocessamento explícito:</strong> todas as camadas utilizam estratégia reprocessável (DROP TABLE + overwrite), adequada ao caráter histórico da fonte pública.
+- <strong>Bronze sem regras de negócio:</strong> preserva fidelidade à fonte original e garante rastreabilidade dos dados.
+- <strong>Silver com foco em qualidade:</strong> concentra tipagem, padronização, organização e consistência dos dados.
+- <strong>Gold orientada a consumo:</strong> entrega dados agregados e prontos para análise, reduzindo complexidade para usuários finais e ferramentas de BI.
+- <strong>Delta Lake:</strong> utilizado para garantir confiabilidade, consistência e organização das tabelas analíticas.
+- <strong>Controle de versionamento:</strong> integração do Databricks com repositório GitHub, permitindo versionamento dos notebooks, rastreabilidade de alterações e sincronização entre ambiente de desenvolvimento e código-fonte.
 
 
 
